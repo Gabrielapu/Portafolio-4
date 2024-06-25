@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+     font-family: 'Inter';
+     src: url('/src/assets/font/Inter-VariableFont_slnt\,wght.ttf');
+  }
+}
+
+@layer utilities {
+  .full-center {
+     @apply flex justify-center items-center;
+  }
+}
+
+:root {
+  /* Estilos vue multiselect*/
+  /* https://github.com/vueform/multiselect */
+  --ms-ring-color: #fff;
+  --ms-spinner-color: #2563EB;
+  --ms-option-bg-selected: #2563EB;
+  --ms-option-bg-selected-pointed: #2563EB;
+  --ms-option-color-pointed: rgb(148 163 184 / 1);
+  --ms-bg-disabled: #F8FAFC;
+  --ms-border-color: #E2E8F0;
+}
+
+/* Logra que mapa quede detras del modal de cargar demanda */
+.leaflet-pane {
+  z-index: 4;
+}
+.leaflet-top, .leaflet-bottom {
+  z-index: 5;
+}
